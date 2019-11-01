@@ -13,5 +13,10 @@ namespace QueueingDemo.DAL
             db.Service.Add(new Service { Name = serviceName });
             db.SaveChanges();
         }
+
+        public static List<Service> GetServices()
+        {
+            return new masterContext().Service.OrderBy(e => e.Name).ToList();
+        }
     }
 }

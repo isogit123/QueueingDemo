@@ -22,6 +22,7 @@ namespace QueueingDemo
         {
 
             services.AddControllersWithViews();
+            new Models.masterContext().Database.EnsureCreated();
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

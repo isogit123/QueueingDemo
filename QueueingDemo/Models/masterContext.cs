@@ -25,7 +25,7 @@ namespace QueueingDemo.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=serveo.net;Initial Catalog=master; user id=sa; password=Fortune123;");
+                optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=Queueing; user id=sa; password=Fortune123;");
             }
         }
 
