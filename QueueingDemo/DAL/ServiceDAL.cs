@@ -16,7 +16,8 @@ namespace QueueingDemo.DAL
 
         public static List<Service> GetServices()
         {
-            return new masterContext().Service.OrderBy(e => e.Name).ToList();
+            masterContext db = new masterContext();
+            return db.Service.OrderBy(e => e.Name).ToList();
         }
     }
 }

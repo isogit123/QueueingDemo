@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using QueueingDemo.Models;
 
 namespace QueueingDemo
 {
@@ -22,7 +23,7 @@ namespace QueueingDemo
         {
 
             services.AddControllersWithViews();
-            new Models.masterContext().Database.EnsureCreated();
+            new masterContext().Database.EnsureCreated();
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
